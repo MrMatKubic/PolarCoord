@@ -14,14 +14,15 @@ function setup()
 
 function draw()
 {
-    background(51);
+    background(0);
     translate(width / 2, height / 2);
     noFill();
     stroke(255);
+    strokeWeight(3);
 
-    /*for(let theta = 0; theta < TWO_PI; theta += TWO_PI / 200)
+    for(let theta = 0; theta < TWO_PI * 30; theta += TWO_PI / 200)
     {
-        r = (1 - cos(theta) * sin(3 * theta)) * 120;
+        r = (Math.sqrt(cos(2 * theta))) * 120;
         x = r * cos(theta);
         y = r * sin(theta);
         points.push(createVector(x, y, theta));    
@@ -32,5 +33,5 @@ function draw()
     {
         vertex(points[i].x, points[i].y);
     } 
-    endShape();*/
+    endShape();
 }
