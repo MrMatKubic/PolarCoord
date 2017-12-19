@@ -10,14 +10,6 @@ function setup()
     x = 0;
     y = 0;
     r = 250;
-
-    for(let theta = 0; theta < TWO_PI; theta += TWO_PI / 200)
-    {
-        r = random(100, 250);
-        x = r * cos(theta);
-        y = r * sin(theta);
-        points.push(createVector(x, y, theta));    
-    }    
 }
 
 function draw()
@@ -27,15 +19,18 @@ function draw()
     noFill();
     stroke(255);
 
-
+    /*for(let theta = 0; theta < TWO_PI; theta += TWO_PI / 200)
+    {
+        r = (1 - cos(theta) * sin(3 * theta)) * 120;
+        x = r * cos(theta);
+        y = r * sin(theta);
+        points.push(createVector(x, y, theta));    
+    }  
 
     beginShape();
     for(let i = 0; i < points.length; i++)
     {
-        r = random(100, 250);
-        points[i].x = r * cos(points[i].z);
-        points[i].y = r * sin(points[i].z);
         vertex(points[i].x, points[i].y);
     } 
-    endShape();
+    endShape();*/
 }
