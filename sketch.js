@@ -42,9 +42,7 @@ function drawShape()
     // LOOP TO DRAW POINTS WITH VERTICES
     beginShape();
     for(let i = 0; i < points.length; i++)
-    {
         vertex(points[i].x, points[i].y);
-    } 
     endShape();
 
     if(theta < TWO_PI) theta += TWO_PI / 400;  
